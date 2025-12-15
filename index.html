@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#FF6B35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>LePizza - Доставка пиццы</title>
+
+    <!-- pwa метатеги -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
+
+    <!-- шрифт alex brush для логотипа -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <!-- основные стили сайта -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pizza-custom.css">
+</head>
+<body>
+<!-- прелоадер отображается при загрузке страницы -->
+<div class="preloader" id="preloader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+</div>
+
+<!-- окно с предложением установить pwa приложение -->
+<div class="install-prompt-card" id="installPromptCard">
+    <!-- кнопка закрытия окна -->
+    <button class="install-prompt-close" onclick="document.getElementById('installPromptCard').style.display='none'">×</button>
+    <div class="install-prompt-content">
+        <!-- иконка пиццы -->
+        <div class="install-prompt-icon">🍕</div>
+        <!-- заголовок окна -->
+        <h4 class="install-prompt-title">Установите LePizza</h4>
+        <!-- текст описания -->
+        <p class="install-prompt-text">Быстрый доступ к заказу пиццы прямо с главного экрана!</p>
+        <!-- кнопка ведёт на coming-soon.html -->
+        <a href="coming-soon.html" class="btn btn-primary btn-sm">Скачать приложение</a>
+    </div>
+</div>
+
+<!-- шапка сайта -->
+<header class="header-area">
+    <div class="container">
+        <div class="header-content">
+            <!-- логотип с красивым шрифтом -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-text alex-brush-regular">LePizza</a>
+            </div>
+
+            <!-- иконка корзины с бейджем -->
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon-wrapper">
+                    <span class="cart-icon">🛒</span>
+                    <!-- количество товаров в корзине -->
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- главный баннер с автоматической сменой изображений -->
+<div class="hero-section">
+    <div class="container">
+        <!-- слайдер изображений пицц меняется каждые 5 секунд -->
+        <div class="hero-slider">
+            <!-- слайд 1: маргарита (активный по умолчанию) -->
+            <div class="hero-slide active">
+                <img src="img/pizza-margherita.jpg" alt="Маргарита">
+            </div>
+            <!-- слайд 2: пепперони -->
+            <div class="hero-slide">
+                <img src="img/pizza-pepperoni.jpg" alt="Пепперони">
+            </div>
+            <!-- слайд 3: четыре сыра -->
+            <div class="hero-slide">
+                <img src="img/pizza-4cheese.jpg" alt="Четыре сыра">
+            </div>
+            <!-- слайд 4: гавайская -->
+            <div class="hero-slide">
+                <img src="img/pizza-hawaiian.jpg" alt="Гавайская">
+            </div>
+        </div>
+        <!-- текст поверх слайдера -->
+        <h1 class="hero-title">Доставка пиццы за 30 минут</h1>
+        <p class="hero-subtitle">Свежая, горячая, вкусная!</p>
+    </div>
+</div>
+
+<!-- секция категорий пицц -->
+<div class="category-section">
+    <div class="container">
+        <h3 class="section-title">Категории</h3>
+        <!-- сетка категорий -->
+        <div class="category-grid">
+            <!-- категория: классические пиццы -->
+            <a href="products.html#classic" class="category-item">
+                <div class="category-icon">🍕</div>
+                <span class="category-name">Классические</span>
+            </a>
+            <!-- категория: премиум пиццы -->
+            <a href="products.html#premium" class="category-item">
+                <div class="category-icon">⭐</div>
+                <span class="category-name">Премиум</span>
+            </a>
+            <!-- категория: вегетарианские -->
+            <a href="products.html#vegetarian" class="category-item">
+                <div class="category-icon">🥬</div>
+                <span class="category-name">Вегетарианские</span>
+            </a>
+            <!-- категория: мясные -->
+            <a href="products.html#meat" class="category-item">
+                <div class="category-icon">🥓</div>
+                <span class="category-name">Мясные</span>
+            </a>
+            <!-- категория: острые -->
+            <a href="products.html#spicy" class="category-item">
+                <div class="category-icon">🌶️</div>
+                <span class="category-name">Острые</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- секция с отзывами клиентов в формате stories -->
+<div class="stories-section">
+    <div class="container">
+        <h3 class="section-title">Отзывы наших клиентов</h3>
+        <!-- горизонтальная прокрутка stories -->
+        <div class="stories-wrapper">
+            <!-- отзыв анны -->
+            <div class="story-item">
+                <div class="story-avatar">
+                    <img src="img/avatar1.jpg" alt="Анна">
+                    <!-- цветное кольцо вокруг аватара -->
+                    <div class="story-ring"></div>
+                </div>
+                <span class="story-name">Анна</span>
+            </div>
+            <!-- отзыв дмитрия -->
+            <div class="story-item">
+                <div class="story-avatar">
+                    <img src="img/avatar2.jpg" alt="Дмитрий">
+                    <div class="story-ring"></div>
+                </div>
+                <span class="story-name">Дмитрий</span>
+            </div>
+            <!-- отзыв марии -->
+            <div class="story-item">
+                <div class="story-avatar">
+                    <img src="img/avatar3.jpg" alt="Мария">
+                    <div class="story-ring"></div>
+                </div>
+                <span class="story-name">Мария</span>
+            </div>
+            <!-- отзыв алексея -->
+            <div class="story-item">
+                <div class="story-avatar">
+                    <img src="img/avatar4.jpg" alt="Алексей">
+                    <div class="story-ring"></div>
+                </div>
+                <span class="story-name">Алексей</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- секция популярных пицц -->
+<div class="products-section">
+    <div class="container">
+        <!-- заголовок с ссылкой на все товары -->
+        <div class="section-header">
+            <h3 class="section-title">Популярные пиццы</h3>
+            <a href="products.html" class="view-all-link">Все →</a>
+        </div>
+
+        <!-- сетка товаров -->
+        <div class="products-grid">
+            <!-- карточка товара: маргарита -->
+            <div class="product-card">
+                <!-- изображение с бейджем "хит" -->
+                <div class="product-image-wrapper">
+                    <img src="img/pizza-margherita.jpg" alt="Маргарита">
+                    <span class="product-badge">Хит</span>
+                </div>
+                <!-- информация о товаре -->
+                <div class="product-info">
+                    <h4 class="product-title">Маргарита</h4>
+                    <p class="product-description">Томаты, моцарелла, базилик</p>
+                    <!-- цена и кнопка -->
+                    <div class="product-footer">
+                        <span class="product-price">от 450₽</span>
+                        <a href="product.html" class="btn btn-sm btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- карточка товара: пепперони -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="img/pizza-pepperoni.jpg" alt="Пепперони">
+                </div>
+                <div class="product-info">
+                    <h4 class="product-title">Пепперони</h4>
+                    <p class="product-description">Пепперони, моцарелла, томатный соус</p>
+                    <div class="product-footer">
+                        <span class="product-price">от 520₽</span>
+                        <a href="product.html" class="btn btn-sm btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- карточка товара: четыре сыра -->
+            <div class="product-card">
+                <!-- изображение с бейджем "новинка" -->
+                <div class="product-image-wrapper">
+                    <img src="img/pizza-4cheese.jpg" alt="Четыре сыра">
+                    <span class="product-badge badge-new">Новинка</span>
+                </div>
+                <div class="product-info">
+                    <h4 class="product-title">Четыре сыра</h4>
+                    <p class="product-description">Моцарелла, дор блю, пармезан, чеддер</p>
+                    <div class="product-footer">
+                        <span class="product-price">от 590₽</span>
+                        <a href="product.html" class="btn btn-sm btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- карточка товара: гавайская -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="img/pizza-hawaiian.jpg" alt="Гавайская">
+                </div>
+                <div class="product-info">
+                    <h4 class="product-title">Гавайская</h4>
+                    <p class="product-description">Ветчина, ананасы, моцарелла</p>
+                    <div class="product-footer">
+                        <span class="product-price">от 550₽</span>
+                        <a href="product.html" class="btn btn-sm btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- секция с акцией и таймером обратного отсчёта -->
+<div class="promo-section">
+    <div class="container">
+        <div class="promo-content">
+            <h3 class="promo-title">🎉 Акция! Скидка 30%</h3>
+            <p class="promo-subtitle">До конца акции осталось:</p>
+            <!-- таймер работает через active.js - ищет элементы с data-countdown -->
+            <div class="countdown-timer">
+                <!-- блок часов -->
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countdownHours">12</span>
+                    <span class="countdown-label">часов</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <!-- блок минут -->
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countdownMinutes">34</span>
+                    <span class="countdown-label">минут</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <!-- блок секунд -->
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countdownSeconds">56</span>
+                    <span class="countdown-label">секунд</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- секция с формой обратной связи -->
+<div class="contact-section">
+    <div class="container">
+        <h3 class="section-title">Свяжитесь с нами</h3>
+        <!-- форма без js обработки, только html -->
+        <form class="contact-form" action="#" method="post">
+            <!-- поле имени -->
+            <div class="form-group mb-3">
+                <label class="form-label">Имя</label>
+                <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+            </div>
+            <!-- поле телефона -->
+            <div class="form-group mb-3">
+                <label class="form-label">Телефон</label>
+                <input type="tel" class="form-control" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <!-- поле сообщения -->
+            <div class="form-group mb-3">
+                <label class="form-label">Сообщение</label>
+                <textarea class="form-control" name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+            </div>
+            <!-- кнопка отправки -->
+            <button type="submit" class="btn btn-primary w-100">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- нижнее навигационное меню -->
+<nav class="footer-nav">
+    <!-- активная вкладка - главная -->
+    <a href="index.html" class="footer-nav-item active">
+        <span class="footer-nav-icon">🏠</span>
+        <span class="footer-nav-label">Главная</span>
+    </a>
+    <!-- вкладка меню -->
+    <a href="products.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🍕</span>
+        <span class="footer-nav-label">Меню</span>
+    </a>
+    <!-- вкладка корзины -->
+    <a href="cart.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🛒</span>
+        <span class="footer-nav-label">Корзина</span>
+    </a>
+    <!-- вкладка контактов -->
+    <a href="contacts.html" class="footer-nav-item">
+        <span class="footer-nav-icon">📞</span>
+        <span class="footer-nav-label">Контакты</span>
+    </a>
+</nav>
+
+<!-- подключение js библиотек из affan pwa -->
+<!-- bootstrap для работы компонентов интерфейса -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- slidetoggle для плавной анимации элементов -->
+<script src="https://designing-world.com/affan-v1.8/js/slideToggle.min.js"></script>
+<!-- pwa для регистрации service worker -->
+<script src="https://designing-world.com/affan-v1.8/js/pwa.js"></script>
+<!-- active для навигации и работы таймера -->
+<script src="js/active.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Корзина - LePizza</title>
+
+    <!-- pwa метаданные -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+
+    <!-- шрифт для лого -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <!-- основные стили -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pizza-custom.css">
+</head>
+<body>
+<!-- шапка с навигацией -->
+<header class="header-area">
+    <div class="container">
+        <div class="header-content">
+            <!-- кнопка назад -->
+            <a href="products.html" class="back-btn">← Назад</a>
+            <!-- логотип с шрифтом alex brush -->
+            <a href="index.html" class="logo-text alex-brush-regular">LePizza</a>
+            <!-- текст "корзина" вместо иконки -->
+            <span style="color: #FF6B35; font-weight: 500; font-size: 14px;">Корзина</span>
+        </div>
+    </div>
+</header>
+
+<!-- содержимое корзины -->
+<div class="cart-page-content">
+    <div class="container">
+        <!-- товар 1: маргарита -->
+        <div class="cart-item">
+            <!-- изображение пиццы -->
+            <img src="img/pizza-margherita.jpg" alt="Маргарита" class="cart-item-image">
+            <!-- детали товара -->
+            <div class="cart-item-details">
+                <!-- название пиццы -->
+                <h4 class="cart-item-title">Маргарита</h4>
+                <!-- опции: размер и тесто -->
+                <p class="cart-item-options">Средняя • Тонкое тесто</p>
+                <!-- нижняя часть: цена и количество -->
+                <div class="cart-item-footer">
+                    <!-- цена товара -->
+                    <span class="cart-item-price">650₽</span>
+                    <!-- отображение количества -->
+                    <div class="quantity-display">
+                        <span>1 шт</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- товар 2: пепперони -->
+        <div class="cart-item">
+            <!-- изображение пиццы -->
+            <img src="img/pizza-pepperoni.jpg" alt="Пепперони" class="cart-item-image">
+            <!-- детали товара -->
+            <div class="cart-item-details">
+                <!-- название пиццы -->
+                <h4 class="cart-item-title">Пепперони</h4>
+                <!-- опции: размер и тесто -->
+                <p class="cart-item-options">Большая • Пышное тесто</p>
+                <!-- нижняя часть: цена и количество -->
+                <div class="cart-item-footer">
+                    <!-- цена товара -->
+                    <span class="cart-item-price">1840₽</span>
+                    <!-- отображение количества -->
+                    <div class="quantity-display">
+                        <span>2 шт</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- поле для ввода промокода -->
+        <div style="display: flex; gap: 12px; margin-top: 16px;">
+            <!-- инпут для промокода -->
+            <input type="text" class="form-control" placeholder="Промокод" style="flex: 1;">
+            <!-- кнопка применения промокода -->
+            <button class="btn btn-sm btn-primary">Применить</button>
+        </div>
+    </div>
+</div>
+
+<!-- фиксированная панель с итогами заказа -->
+<div class="cart-summary-fixed">
+    <div class="container">
+        <!-- строка: количество товаров -->
+        <div class="summary-row">
+            <span class="summary-label">Товары (3 шт)</span>
+            <span>2490₽</span>
+        </div>
+        <!-- строка: стоимость доставки -->
+        <div class="summary-row">
+            <span class="summary-label">Доставка</span>
+            <span>Бесплатно</span>
+        </div>
+        <!-- строка: итоговая сумма -->
+        <div class="summary-row summary-total">
+            <span>Итого</span>
+            <span>2490₽</span>
+        </div>
+        <!-- кнопка оформления заказа -->
+        <a href="checkout.html" class="btn btn-primary w-100">Оформить заказ</a>
+    </div>
+</div>
+
+<!-- нижняя навигация -->
+<nav class="footer-nav">
+    <!-- ссылка на главную -->
+    <a href="index.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🏠</span>
+        <span class="footer-nav-label">Главная</span>
+    </a>
+    <!-- ссылка на меню -->
+    <a href="products.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🍕</span>
+        <span class="footer-nav-label">Меню</span>
+    </a>
+    <!-- активная ссылка корзины -->
+    <a href="cart.html" class="footer-nav-item active">
+        <span class="footer-nav-icon">🛒</span>
+        <span class="footer-nav-label">Корзина</span>
+    </a>
+    <!-- ссылка на контакты -->
+    <a href="contacts.html" class="footer-nav-item">
+        <span class="footer-nav-icon">📞</span>
+        <span class="footer-nav-label">Контакты</span>
+    </a>
+</nav>
+
+<!-- подключение скриптов affan pwa -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://designing-world.com/affan-v1.8/js/active.js"></script>
+</body>
+</html>

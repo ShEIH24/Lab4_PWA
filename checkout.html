@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Оформление заказа - LePizza</title>
+
+    <!-- pwa метаданные -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+
+    <!-- шрифт для лого -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <!-- основные стили -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pizza-custom.css">
+</head>
+<body>
+<!-- шапка с навигацией -->
+<header class="header-area">
+    <div class="container">
+        <div class="header-content">
+            <!-- кнопка возврата в корзину -->
+            <a href="cart.html" class="back-btn">← Назад</a>
+            <!-- логотип -->
+            <a href="index.html" class="logo-text alex-brush-regular">LePizza</a>
+            <!-- текст "оформление" -->
+            <span style="font-size: 14px; color: #FF6B35; font-weight: 500;">Оформление</span>
+        </div>
+    </div>
+</header>
+
+<!-- страница оформления заказа -->
+<div class="checkout-page">
+    <div class="container">
+        <!-- форма заказа без js обработки -->
+        <form action="#" method="post">
+
+            <!-- секция: способ получения заказа -->
+            <div class="checkout-section">
+                <!-- заголовок секции -->
+                <h3 class="checkout-section-title">Способ получения</h3>
+
+                <!-- опция: доставка (выбрана по умолчанию) -->
+                <div class="delivery-option" style="border-color: #FF6B35; background: #FFF5F2;">
+                    <!-- иконка и название -->
+                    <div class="option-title">🚚 Доставка</div>
+                    <!-- детали опции -->
+                    <div class="option-details">Доставим за 30-40 минут</div>
+                </div>
+
+                <!-- опция: самовывоз -->
+                <div class="delivery-option">
+                    <div class="option-title">🏪 Самовывоз</div>
+                    <div class="option-details">Будет готово через 15-20 минут</div>
+                </div>
+            </div>
+
+            <!-- секция: контактная информация -->
+            <div class="checkout-section">
+                <h3 class="checkout-section-title">Контактная информация</h3>
+
+                <!-- поле имени (обязательное) -->
+                <div class="form-group mb-3">
+                    <label class="form-label">Имя *</label>
+                    <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                </div>
+
+                <!-- поле телефона (обязательное) -->
+                <div class="form-group mb-3">
+                    <label class="form-label">Телефон *</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+
+                <!-- поле email (необязательное) -->
+                <div class="form-group mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="your@email.com">
+                </div>
+            </div>
+
+            <!-- секция: адрес доставки -->
+            <div class="checkout-section">
+                <h3 class="checkout-section-title">Адрес доставки</h3>
+
+                <!-- поле улицы -->
+                <div class="form-group mb-3">
+                    <label class="form-label">Улица *</label>
+                    <input type="text" class="form-control" name="street" placeholder="Например: ул. Ленина" required>
+                </div>
+
+                <!-- два поля в ряд: дом и квартира -->
+                <div class="form-group-row mb-3">
+                    <!-- поле дома -->
+                    <div class="form-group">
+                        <label class="form-label">Дом *</label>
+                        <input type="text" class="form-control" name="house" placeholder="12" required>
+                    </div>
+                    <!-- поле квартиры -->
+                    <div class="form-group">
+                        <label class="form-label">Квартира</label>
+                        <input type="text" class="form-control" name="apartment" placeholder="45">
+                    </div>
+                </div>
+            </div>
+
+            <!-- секция: способ оплаты -->
+            <div class="checkout-section">
+                <h3 class="checkout-section-title">Способ оплаты</h3>
+
+                <!-- опция: картой онлайн (выбрана) -->
+                <div class="delivery-option" style="border-color: #FF6B35; background: #FFF5F2;">
+                    <div class="option-title">💳 Картой онлайн</div>
+                    <div class="option-details">Оплата на сайте</div>
+                </div>
+
+                <!-- опция: наличными -->
+                <div class="delivery-option">
+                    <div class="option-title">💵 Наличными курьеру</div>
+                    <div class="option-details">При получении заказа</div>
+                </div>
+            </div>
+
+            <!-- секция: состав заказа -->
+            <div class="checkout-section">
+                <h3 class="checkout-section-title">Ваш заказ</h3>
+
+                <!-- блок с итогами заказа -->
+                <div class="order-summary">
+                    <!-- товар 1 -->
+                    <div class="order-summary-item">
+                        <span>Маргарита (средняя) × 1</span>
+                        <span>650₽</span>
+                    </div>
+                    <!-- товар 2 -->
+                    <div class="order-summary-item">
+                        <span>Пепперони (большая) × 2</span>
+                        <span>1840₽</span>
+                    </div>
+                    <!-- стоимость доставки -->
+                    <div class="order-summary-item">
+                        <span>Доставка</span>
+                        <span>Бесплатно</span>
+                    </div>
+                    <!-- итоговая сумма -->
+                    <div class="order-summary-item order-summary-total">
+                        <span>Итого</span>
+                        <span>2490₽</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- кнопка оформления заказа -->
+            <button type="submit" class="btn btn-primary w-100" style="padding: 16px; font-size: 18px;">
+                Оформить заказ
+            </button>
+
+            <!-- текст соглашения -->
+            <p class="checkout-agreement">
+                Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
+            </p>
+        </form>
+    </div>
+</div>
+
+<!-- нижняя навигация -->
+<nav class="footer-nav">
+    <!-- главная -->
+    <a href="index.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🏠</span>
+        <span class="footer-nav-label">Главная</span>
+    </a>
+    <!-- меню -->
+    <a href="products.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🍕</span>
+        <span class="footer-nav-label">Меню</span>
+    </a>
+    <!-- корзина (активная) -->
+    <a href="cart.html" class="footer-nav-item active">
+        <span class="footer-nav-icon">🛒</span>
+        <span class="footer-nav-label">Корзина</span>
+    </a>
+    <!-- контакты -->
+    <a href="contacts.html" class="footer-nav-item">
+        <span class="footer-nav-icon">📞</span>
+        <span class="footer-nav-label">Контакты</span>
+    </a>
+</nav>
+
+<!-- подключение скриптов affan pwa -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://designing-world.com/affan-v1.8/js/active.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Маргарита - LePizza</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+
+    <!-- Шрифт для лого -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pizza-custom.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header-area">
+    <div class="container">
+        <div class="header-content">
+            <a href="products.html" class="back-btn">← Назад</a>
+            <a href="index.html" class="logo-text alex-brush-regular">LePizza</a>
+            <a href="cart.html" class="cart-icon-wrapper">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-badge">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Product Detail -->
+<div style="padding-bottom: 100px;">
+    <img src="img/pizza-margherita.jpg" alt="Маргарита" class="product-detail-image">
+
+    <div class="product-detail-content">
+        <!-- Заголовок и цена -->
+        <h2 class="product-detail-title">Маргарита</h2>
+        <div class="product-detail-price">450₽</div>
+
+        <!-- Описание -->
+        <p class="product-detail-description">
+            Классическая итальянская пицца с томатным соусом, моцареллой и свежим базиликом.
+            Идеальное сочетание простоты и вкуса. Готовится на тонком тесте в дровяной печи.
+        </p>
+
+        <!-- Выбор размера -->
+        <div class="product-options">
+            <h3 class="product-options-title">Размер</h3>
+            <div class="option-group">
+                <div class="option-item">
+                    <span class="option-label">Маленькая</span>
+                    <span class="option-value">25 см</span>
+                </div>
+                <div class="option-item" style="border-color: #FF6B35; background: #FFF5F2;">
+                    <span class="option-label">Средняя</span>
+                    <span class="option-value">30 см</span>
+                </div>
+                <div class="option-item">
+                    <span class="option-label">Большая</span>
+                    <span class="option-value">35 см</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Выбор теста -->
+        <div class="product-options">
+            <h3 class="product-options-title">Тесто</h3>
+            <div class="option-group">
+                <div class="option-item" style="border-color: #FF6B35; background: #FFF5F2;">
+                    <span class="option-label">Тонкое</span>
+                </div>
+                <div class="option-item">
+                    <span class="option-label">Пышное</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Состав -->
+        <div class="product-options">
+            <h3 class="product-options-title">Состав</h3>
+            <div class="ingredients-grid">
+                <div class="ingredient-item">
+                    <span class="ingredient-icon">🍅</span>
+                    <span class="ingredient-name">Томатный соус</span>
+                </div>
+                <div class="ingredient-item">
+                    <span class="ingredient-icon">🧀</span>
+                    <span class="ingredient-name">Моцарелла</span>
+                </div>
+                <div class="ingredient-item">
+                    <span class="ingredient-icon">🌿</span>
+                    <span class="ingredient-name">Базилик</span>
+                </div>
+                <div class="ingredient-item">
+                    <span class="ingredient-icon">🫒</span>
+                    <span class="ingredient-name">Оливковое масло</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пищевая ценность -->
+        <div class="product-options">
+            <h3 class="product-options-title">Пищевая ценность (на 100г)</h3>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <span class="nutrition-value">245</span>
+                    <span class="nutrition-label">ккал</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value">12г</span>
+                    <span class="nutrition-label">белки</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value">9г</span>
+                    <span class="nutrition-label">жиры</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value">28г</span>
+                    <span class="nutrition-label">углеводы</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Кнопка добавления в корзину -->
+<div class="add-to-cart-section">
+    <a href="cart.html" class="btn btn-primary w-100" style="padding: 14px; font-size: 16px;">
+        Добавить в корзину • 450₽
+    </a>
+</div>
+
+<!-- Footer Navigation -->
+<nav class="footer-nav">
+    <a href="index.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🏠</span>
+        <span class="footer-nav-label">Главная</span>
+    </a>
+    <a href="products.html" class="footer-nav-item active">
+        <span class="footer-nav-icon">🍕</span>
+        <span class="footer-nav-label">Меню</span>
+    </a>
+    <a href="cart.html" class="footer-nav-item">
+        <span class="footer-nav-icon">🛒</span>
+        <span class="footer-nav-label">Корзина</span>
+    </a>
+    <a href="contacts.html" class="footer-nav-item">
+        <span class="footer-nav-icon">📞</span>
+        <span class="footer-nav-label">Контакты</span>
+    </a>
+</nav>
+
+<!-- Только необходимые скрипты -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://designing-world.com/affan-v1.8/js/active.js"></script>
+</body>
+</html>
